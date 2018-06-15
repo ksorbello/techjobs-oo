@@ -8,35 +8,36 @@
 
 <div class="container body-content" >
     <form th:object="${job}" style="max-width:600px;">
-    <table class = "job-listing" >
-        <tbody>
-       <tr th:for = "name">
-            <th>Name</th>
-            <td th:field = "*{name}" th:text="${#strings.capitalizeWords(job.name)}"></td>
-        </tr>
-        <tr th:for = "employer">
-            <th>Employer</th>
-            <td th:field = "*{employer}" th:text = "${job.employer}"></td>
-        </tr>
+        <table class = "job-listing" >
+            <tbody>
 
-        <tr th:for = "location">
-            <th>Location</th>
-            <td th:field = "*{location}" th:text="${job.location}"></td>
-        </tr>
+            <tr th:for = "name">
+                <th>Name</th>
+                <td th:field = "*{name}" th:text="${#strings.capitalizeWords(job.name)}"></td>
+            </tr>
+            <tr th:for = "employer">
+                <th>Employer</th>
+                <td th:field = "*{employer}" th:text = "${job.employer}"></td>
+            </tr>
 
-        <tr th:for = "positionType">
-            <th>Position Type</th>
-            <td th:field = "*{positionType}" th:text="${job.positionType}"></td>
-        </tr>
+            <tr th:for = "location">
+                <th>Location</th>
+                <td th:field = "*{location}" th:text="${job.location}"></td>
+            </tr>
 
-        <tr th:for = "coreCompetency">
-            <th>Skill</th>
-            <td th:field = "*{coreCompetency}" th:text="${job.coreCompetency}"></td>
-        </tr>
-        </tbody>
+            <tr th:for = "positionType">
+                <th>Position Type</th>
+                <td th:field = "*{positionType}" th:text="${job.positionType}"></td>
+            </tr>
+
+            <tr th:for = "coreCompetency">
+                <th>Skill</th>
+                <td th:field = "*{coreCompetency}" th:text="${job.coreCompetency}"></td>
+            </tr>
+            </tbody>
 
 
-    </table>
+        </table>
     </form>
 
 
